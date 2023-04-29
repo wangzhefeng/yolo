@@ -174,3 +174,4 @@ darknet/
 yolov5/
 YOLOv6/
 ultralytics/
+.DS_Store
