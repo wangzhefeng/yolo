@@ -18,27 +18,30 @@ _path = os.path.abspath(os.path.dirname(__file__))
 if os.path.join(_path, "../../..") not in sys.path:
     sys.path.append(os.path.join(_path, "../../.."))
 
-from PIL import Image
 from ultralytics import YOLO
+from PIL import Image
 
-from datasets.example_image import get_example_image
+from data.example_image import get_example_image
 
 # global variable
 LOGGING_LABEL = __file__.split('/')[-1][:-3]
 
 
-# model 
-model = YOLO("yolov8n-cls.pt")
+# model
+model = YOLO("yolov8n.pt")
 
-# data
-img_path, pil_img = get_example_image("park.jpg")
+# image
+img_name = "park.jpg"
+img_path, pil_img = get_example_image(img_name)
 
 # model predict
 preds = model.predict(source = img_path, save_txt = True, save = True)
 
-Image.open(model.predictor.save_dir/"park.jpg")
+# 查看预测结果
+Image.open(model.predictor.save_dir/img_name)
 
-
+# 摄像头作为输入
+model.predict(source = 0, show = True)
 
 
 # 测试代码 main 函数
