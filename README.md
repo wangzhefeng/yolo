@@ -35,6 +35,7 @@
     - [Yolo6 GitHub](https://github.com/ultralytics/yolov6)
     - [meituan Yolo6 GitHub](https://github.com/meituan/YOLOv6)
     - [Yolo7 GitHub](https://github.com/WongKinYiu/yolov7)
+    - [yolov7 d2](https://github.com/lucasjinreal/yolov7_d2)
     - [Yolo8 GitHub](https://github.com/ultralytics/ultralytics)
 * Notebooks
     - [Paperspace]()
